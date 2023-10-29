@@ -1,0 +1,55 @@
+package exam_Ass;
+import java.util.*;
+public class Arrayy {
+		public static void main(String[] args) {
+			Scanner sc=new Scanner(System.in);
+			double total=0;
+			 
+			System.out.println("enter the no of values");
+			int n=sc.nextInt();
+			System.out.println("enter the values");
+			double a[]=new double[n];
+			for(int i=0;i<n;i++)
+			{
+				a[i]=sc.nextDouble();  
+			
+			}
+			for(int i=0;i<n;i++)
+				
+			{
+				 total=total+a[i];
+			
+			}
+			double max=a[0];
+			double secondMax=0;
+			for(int i=0;i<n;i++)
+			{
+				if (a[i]>max)
+				{
+					secondMax=max;
+					max=a[i];
+				}
+				// 45.3,67.5,-45.6,20.34,33.0,45.6
+			}
+			double out=(double)secondMax;
+			System.out.println("second maximum is: "+out);
+			
+		
+			System.out.println("average is "+total/n);
+			
+		}
+	}
+
+Output---------
+
+enter the no of values
+6
+enter the values
+45.3
+67.5
+-45.6
+20.34
+33.0
+45.6
+second maximum is: 45.3
+average is 27.689999999999998

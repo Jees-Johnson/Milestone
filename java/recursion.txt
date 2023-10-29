@@ -1,0 +1,45 @@
+package exam_Ass;
+
+import java.util.*;
+class power1
+{
+	int Power2(int a,int b)
+	{
+		
+		if (b == 0) 
+		{
+            return 1;
+        }
+		else
+        {
+            return a * Power2(a, b - 1);
+        }
+
+
+		}
+}
+
+public class Recursion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		power1 p=new power1();
+        System.out.print("Enter a value");
+        int a = sc.nextInt();
+        System.out.print("Enter the powervalue ");
+        int b = sc.nextInt();
+        int result=p.Power2(a,b);
+        System.out.println(result);
+	}
+
+}
+
+
+
+
+OUTPUT---
+
+Enter a value 3
+Enter the powervalue 4
+81
